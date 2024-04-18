@@ -285,7 +285,7 @@
             button3.Name = "button3";
             button3.Size = new Size(114, 36);
             button3.TabIndex = 18;
-            button3.Text = "Clear";
+            button3.Text = "Delete";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 

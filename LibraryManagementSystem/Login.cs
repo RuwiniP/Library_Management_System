@@ -5,9 +5,9 @@ namespace LibraryManagementSystem
 {
     public partial class Login : Form
     {
-        
+
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=libraryManagementSystem");
-       
+
         public Login()
         {
             InitializeComponent();
@@ -21,42 +21,42 @@ namespace LibraryManagementSystem
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            con.Open();
-            string username = this.usernameTxt.Text.ToString();
-            string password = this.passwordTxt.Text.ToString();
-            if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
+            string username = this.usernameTxt.Text;
+            string password = this.passwordTxt.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("No empty space allowed");
+                return;
             }
 
-            else
+            using (MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=libraryManagementSystem"))
             {
-                
-                MySqlCommand cmd = new MySqlCommand("select * from user", con);
-                
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    if (username.Equals(reader.GetString("username")) && (password.Equals(reader.GetString("password"))))
-                    {  
-                        Home home = new Home();
-                        home.Show();
-                        this.Hide();                      
-                    }
+                con.Open();
 
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM user WHERE username = @username", con);
+                cmd.Parameters.AddWithValue("@username", username);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        if (password == reader.GetString("password"))
+                        {
+                            Home home = new Home();
+                            home.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("You have entered an invalid password. Please try again !");
+                        }
+                    }
                     else
                     {
-                        
-                        MessageBox.Show("You have entered invalid credentials. Please try again !");
-                        
+                        MessageBox.Show("User not found. Please check your username.");
                     }
-
-                   
                 }
-
-                con.Close();
-
-
             }
         }
     }

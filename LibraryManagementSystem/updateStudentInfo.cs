@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -178,13 +179,45 @@ namespace LibraryManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SID.Text = "";
-            Sname.Text = "";
-            Semail.Text = "";
-            Scontact.Text = "";
-            Campus.Text = "";
-            Department.Text = "";
-            Semester.Text = "";
+
+            if (!string.IsNullOrWhiteSpace(SID.Text))
+            {
+                DBAccess db1 = new DBAccess();
+                string query2 = ("SELECT COUNT(*) FROM STUDENT where enrollment_No = '" + SID.Text + "'");
+
+                {
+                    using (MySqlCommand command = new MySqlCommand(query2, con))
+                    {
+                        con.Open();
+                        int count = Convert.ToInt32(command.ExecuteScalar()); 
+
+                        if (count > 0)
+                        {
+                            string query1 = ("DELETE FROM STUDENT where enrollment_No = '" + SID.Text + "'");
+                            db1.insertData(query1);
+                            MessageBox.Show("Deleted Student data successfully");
+                            SID.Text = "";
+                            Sname.Text = "";
+                            Semail.Text = "";
+                            Scontact.Text = "";
+                            Campus.Text = "";
+                            Department.Text = "";
+                            Semester.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Student Data does not exist");
+                        }
+
+                        con.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter Enrollment ID");
+            }
+  
         }
 
         private void button4_Click(object sender, EventArgs e)
