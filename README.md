@@ -1,4 +1,4 @@
-# LibraryManagementSystem
+# Library Management System
 
 ## Project Description
 
@@ -58,3 +58,17 @@ View the complete guide for the project idea from [here.](https://stuconestogaco
 git clone https://github.com/RuwiniP/Library_Management_System.git
 ~~~
 
+### 2.Open the Project in Visual Studio:
+* Open Visual Studio IDE.
+* Go to File > Open > Project/Solution.
+* Navigate to the directory where you cloned the repository and select the solution file (usually ending with .sln extension) to open the project in Visual Studio.
+
+### 3.Run the Project
+* Make sure you have followed all the DB Setup Instructions before you run the project.
+* Upon Succesful run you could see the below login page:
+
+![image](https://github.com/RuwiniP/Library_Management_System/assets/31927767/403eb746-0b39-4315-bfe2-0b0d22999e82)
+
+We hope you find it useful and efficient for managing your library's resources. If you have any questions, feedback, or suggestions for improvement, please don't hesitate to reach out.
+
+Enjoy using our application!
