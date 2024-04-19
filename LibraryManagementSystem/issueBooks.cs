@@ -52,6 +52,7 @@ namespace LibraryManagementSystem
         }
         private void issueBookBtn_Click(object sender, EventArgs e)
         {
+
             try
             {
                 // Check if the student ID and ISBN are provided
@@ -98,16 +99,28 @@ namespace LibraryManagementSystem
 
                 MessageBox.Show("You have successfully issued the book.");
                 // Clear input fields after successful issuance
+
+            DBAccess db = new DBAccess();
+            string query = "INSERT INTO issueBook(enrollment_No,ISBN,issue_Date) VALUES ('" + textBox1.Text + "','" + isbn.Text + "','" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "')";
+            db.insertData(query);
+            try
+            {
+                MessageBox.Show("You have succesfully issued the book");
                 textBox1.Text = "";
                 sName.Text = "";
                 sEmail.Text = "";
                 sContact.Text = "";
                 isbn.Text = "";
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred while issuing the book: " + ex.Message);
             }
+
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -162,4 +175,6 @@ namespace LibraryManagementSystem
         }
 
     }
+
 }
+

@@ -84,5 +84,12 @@ namespace LibraryManagementSystem
             home.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            updateBooks updateBooks = new updateBooks();
+            updateBooks.Show();
+            this.Hide();
+        }
     }
 }

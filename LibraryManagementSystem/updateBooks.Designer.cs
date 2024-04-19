@@ -1,6 +1,6 @@
 ﻿namespace LibraryManagementSystem
 {
-    partial class updateStudentInfo
+    partial class updateBooks
 
     {
         /// <summary>
@@ -29,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(updateStudentInfo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(updateBooks));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             label2 = new Label();
@@ -37,31 +37,29 @@
             panel2 = new Panel();
             button5 = new Button();
             button9 = new Button();
+            button10 = new Button();
             button8 = new Button();
-            button7 = new Button();
             button6 = new Button();
             button1 = new Button();
             panel3 = new Panel();
             label3 = new Label();
-            Sname = new TextBox();
+            Bname = new TextBox();
             panel4 = new Panel();
-            button2 = new Button();
-            button4 = new Button();
-            button3 = new Button();
+            searchBtn = new Button();
+            backBtn = new Button();
+            deleteBtn = new Button();
             updateBtn = new Button();
-            Department = new TextBox();
             label10 = new Label();
-            Semester = new TextBox();
-            label9 = new Label();
+            Price = new TextBox();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            SID = new TextBox();
-            Campus = new TextBox();
-            Scontact = new TextBox();
-            Semail = new TextBox();
+            ISBN = new TextBox();
+            Quantity = new TextBox();
+            AName = new TextBox();
+            PName = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -117,8 +115,8 @@
             panel2.BackColor = SystemColors.GradientInactiveCaption;
             panel2.Controls.Add(button5);
             panel2.Controls.Add(button9);
+            panel2.Controls.Add(button10);
             panel2.Controls.Add(button8);
-            panel2.Controls.Add(button7);
             panel2.Controls.Add(button6);
             panel2.Controls.Add(button1);
             panel2.Location = new Point(0, 37);
@@ -131,11 +129,11 @@
             button5.BackColor = Color.SteelBlue;
             button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.ForeColor = SystemColors.ButtonHighlight;
-            button5.Location = new Point(12, 287);
+            button5.Location = new Point(12, 90);
             button5.Name = "button5";
             button5.Size = new Size(170, 43);
             button5.TabIndex = 13;
-            button5.Text = "View Student Info";
+            button5.Text = "View Books";
             button5.UseVisualStyleBackColor = false;
             // 
             // button9
@@ -148,7 +146,19 @@
             button9.TabIndex = 10;
             button9.Text = "Add Books";
             button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
+            button9.Click += searchBtn_Click;
+            // 
+            // button10
+            // 
+            button10.BackColor = SystemColors.GradientInactiveCaption;
+            button10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button10.ForeColor = SystemColors.ControlText;
+            button10.Location = new Point(12, 292);
+            button10.Name = "button10";
+            button10.Size = new Size(170, 43);
+            button10.TabIndex = 21;
+            button10.Text = "View Student Info";
+            button10.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
@@ -160,19 +170,6 @@
             button8.TabIndex = 9;
             button8.Text = "Issue Books";
             button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
-            // 
-            // button7
-            // 
-            button7.BackColor = SystemColors.GradientInactiveCaption;
-            button7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.Location = new Point(12, 94);
-            button7.Name = "button7";
-            button7.Size = new Size(170, 43);
-            button7.TabIndex = 8;
-            button7.Text = "View Books";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
             // 
             // button6
             // 
@@ -184,7 +181,6 @@
             button6.TabIndex = 7;
             button6.Text = "Exit";
             button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
             // 
             // button1
             // 
@@ -213,89 +209,79 @@
             label3.ForeColor = SystemColors.ButtonHighlight;
             label3.Location = new Point(15, 5);
             label3.Name = "label3";
-            label3.Size = new Size(163, 20);
+            label3.Size = new Size(146, 20);
             label3.TabIndex = 0;
-            label3.Text = "Update Student Details";
+            label3.Text = "Update Book Details";
             // 
-            // Sname
+            // Bname
             // 
-            Sname.Location = new Point(149, 100);
-            Sname.Name = "Sname";
-            Sname.Size = new Size(125, 27);
-            Sname.TabIndex = 3;
+            Bname.Location = new Point(149, 100);
+            Bname.Name = "Bname";
+            Bname.Size = new Size(125, 27);
+            Bname.TabIndex = 3;
             // 
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Controls.Add(button2);
-            panel4.Controls.Add(button4);
-            panel4.Controls.Add(button3);
+            panel4.Controls.Add(searchBtn);
+            panel4.Controls.Add(backBtn);
+            panel4.Controls.Add(deleteBtn);
             panel4.Controls.Add(updateBtn);
-            panel4.Controls.Add(Department);
             panel4.Controls.Add(label10);
-            panel4.Controls.Add(Semester);
-            panel4.Controls.Add(label9);
+            panel4.Controls.Add(Price);
             panel4.Controls.Add(label8);
             panel4.Controls.Add(label7);
             panel4.Controls.Add(label6);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(label4);
-            panel4.Controls.Add(SID);
-            panel4.Controls.Add(Campus);
-            panel4.Controls.Add(Scontact);
-            panel4.Controls.Add(Semail);
-            panel4.Controls.Add(Sname);
+            panel4.Controls.Add(ISBN);
+            panel4.Controls.Add(Quantity);
+            panel4.Controls.Add(AName);
+            panel4.Controls.Add(PName);
+            panel4.Controls.Add(Bname);
             panel4.Location = new Point(217, 102);
             panel4.Name = "panel4";
             panel4.Size = new Size(559, 321);
             panel4.TabIndex = 4;
             // 
-            // button2
+            // searchBtn
             // 
-            button2.BackColor = Color.SeaGreen;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(309, 14);
-            button2.Name = "button2";
-            button2.Size = new Size(114, 36);
-            button2.TabIndex = 20;
-            button2.Text = "Search";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            searchBtn.BackColor = Color.SeaGreen;
+            searchBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            searchBtn.ForeColor = SystemColors.ButtonHighlight;
+            searchBtn.Location = new Point(309, 14);
+            searchBtn.Name = "searchBtn";
+            searchBtn.Size = new Size(114, 36);
+            searchBtn.TabIndex = 20;
+            searchBtn.Text = "Search";
+            searchBtn.UseVisualStyleBackColor = false;
+            searchBtn.Click += searchBtn_Click;
             // 
-            // button4
+            // backBtn
             // 
-<<<<<<< HEAD
-            button4.BackColor = Color.Crimson;
-=======
-            button4.BackColor = SystemColors.ControlDarkDark;
->>>>>>> project-merge/master
-            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = SystemColors.ButtonHighlight;
-            button4.Location = new Point(394, 266);
-            button4.Name = "button4";
-            button4.Size = new Size(114, 36);
-            button4.TabIndex = 19;
-            button4.Text = "Back";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            backBtn.BackColor = SystemColors.ControlDarkDark;
+            backBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            backBtn.ForeColor = SystemColors.ButtonHighlight;
+            backBtn.Location = new Point(394, 266);
+            backBtn.Name = "backBtn";
+            backBtn.Size = new Size(114, 36);
+            backBtn.TabIndex = 19;
+            backBtn.Text = "Back";
+            backBtn.UseVisualStyleBackColor = false;
+            backBtn.Click += backBtn_Click;
             // 
-            // button3
+            // deleteBtn
             // 
-<<<<<<< HEAD
-            button3.BackColor = Color.Gray;
-=======
-            button3.BackColor = Color.Crimson;
->>>>>>> project-merge/master
-            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(219, 266);
-            button3.Name = "button3";
-            button3.Size = new Size(114, 36);
-            button3.TabIndex = 18;
-            button3.Text = "Delete";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            deleteBtn.BackColor = Color.Red;
+            deleteBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            deleteBtn.ForeColor = SystemColors.ButtonHighlight;
+            deleteBtn.Location = new Point(234, 266);
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.Size = new Size(114, 36);
+            deleteBtn.TabIndex = 18;
+            deleteBtn.Text = "Delete";
+            deleteBtn.UseVisualStyleBackColor = false;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // updateBtn
             // 
@@ -308,115 +294,98 @@
             updateBtn.TabIndex = 17;
             updateBtn.Text = "Update";
             updateBtn.UseVisualStyleBackColor = false;
-            updateBtn.Click += updateBtn_Click_1;
-            // 
-            // Department
-            // 
-            Department.Location = new Point(415, 206);
-            Department.Name = "Department";
-            Department.Size = new Size(125, 27);
-            Department.TabIndex = 16;
+            updateBtn.Click += updateBtn_Click;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Location = new Point(11, 14);
             label10.Name = "label10";
-            label10.Size = new Size(112, 20);
+            label10.Size = new Size(48, 20);
             label10.TabIndex = 15;
-            label10.Text = "Enrollment No :";
+            label10.Text = "ISBN :";
             // 
-            // Semester
+            // Price
             // 
-            Semester.Location = new Point(415, 101);
-            Semester.Name = "Semester";
-            Semester.Size = new Size(125, 27);
-            Semester.TabIndex = 14;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(297, 213);
-            label9.Name = "label9";
-            label9.Size = new Size(96, 20);
-            label9.TabIndex = 13;
-            label9.Text = "Department :";
+            Price.Location = new Point(415, 101);
+            Price.Name = "Price";
+            Price.Size = new Size(125, 27);
+            Price.TabIndex = 14;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(273, 104);
+            label8.Location = new Point(333, 103);
             label8.Name = "label8";
-            label8.Size = new Size(136, 20);
+            label8.Size = new Size(49, 20);
             label8.TabIndex = 12;
-            label8.Text = "Enrolled Semester :";
+            label8.Text = "price :";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(11, 155);
             label7.Name = "label7";
-            label7.Size = new Size(122, 20);
+            label7.Size = new Size(61, 20);
             label7.TabIndex = 11;
-            label7.Text = "Student Contact :";
+            label7.Text = "Author :";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(11, 209);
             label6.Name = "label6";
-            label6.Size = new Size(108, 20);
+            label6.Size = new Size(76, 20);
             label6.TabIndex = 10;
-            label6.Text = "Student Email :";
+            label6.Text = "Publisher :";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(277, 156);
+            label5.Location = new Point(333, 156);
             label5.Name = "label5";
-            label5.Size = new Size(132, 20);
+            label5.Size = new Size(76, 20);
             label5.TabIndex = 9;
-            label5.Text = "Enrolled Campus : ";
+            label5.Text = "Quantity : ";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(15, 104);
             label4.Name = "label4";
-            label4.Size = new Size(111, 20);
+            label4.Size = new Size(94, 20);
             label4.TabIndex = 8;
-            label4.Text = "Student Name :";
-            label4.Click += label4_Click;
+            label4.Text = "Book Name :";
             // 
-            // SID
+            // ISBN
             // 
-            SID.Location = new Point(149, 14);
-            SID.Name = "SID";
-            SID.Size = new Size(125, 27);
-            SID.TabIndex = 7;
+            ISBN.Location = new Point(149, 19);
+            ISBN.Name = "ISBN";
+            ISBN.Size = new Size(125, 27);
+            ISBN.TabIndex = 7;
             // 
-            // Campus
+            // Quantity
             // 
-            Campus.Location = new Point(415, 152);
-            Campus.Name = "Campus";
-            Campus.Size = new Size(125, 27);
-            Campus.TabIndex = 6;
+            Quantity.Location = new Point(415, 152);
+            Quantity.Name = "Quantity";
+            Quantity.Size = new Size(125, 27);
+            Quantity.TabIndex = 6;
             // 
-            // Scontact
+            // AName
             // 
-            Scontact.Location = new Point(149, 148);
-            Scontact.Name = "Scontact";
-            Scontact.Size = new Size(125, 27);
-            Scontact.TabIndex = 5;
+            AName.Location = new Point(149, 148);
+            AName.Name = "AName";
+            AName.Size = new Size(125, 27);
+            AName.TabIndex = 5;
             // 
-            // Semail
+            // PName
             // 
-            Semail.Location = new Point(149, 202);
-            Semail.Name = "Semail";
-            Semail.Size = new Size(125, 27);
-            Semail.TabIndex = 4;
+            PName.Location = new Point(149, 202);
+            PName.Name = "PName";
+            PName.Size = new Size(125, 27);
+            PName.TabIndex = 4;
             // 
-            // updateStudentInfo
+            // updateBooks
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -428,9 +397,9 @@
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Name = "updateStudentInfo";
+            Name = "updateBooks";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "addStudents Page";
+            Text = "UpdateBooks Page";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -452,29 +421,27 @@
         private Button button6;
         private Panel panel3;
         private Label label3;
-        private TextBox Sname;
+        private TextBox Bname;
         private Panel panel4;
         private Label label8;
         private Label label7;
         private Label label6;
         private Label label5;
         private Label label4;
-        private TextBox SID;
-        private TextBox Campus;
-        private TextBox Scontact;
-        private TextBox Semail;
-        private Button button4;
-        private Button button3;
+        private TextBox ISBN;
+        private TextBox Quantity;
+        private TextBox AName;
+        private TextBox PName;
+        private Button backBtn;
+        private Button deleteBtn;
         private Button updateBtn;
-        private TextBox Department;
         private Label label10;
-        private TextBox Semester;
-        private Label label9;
+        private TextBox Price;
         private Button button9;
         private Button button8;
-        private Button button7;
         private Button button1;
+        private Button searchBtn;
         private Button button5;
-        private Button button2;
+        private Button button10;
     }
 }

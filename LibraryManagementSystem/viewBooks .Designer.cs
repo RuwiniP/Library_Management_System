@@ -45,6 +45,10 @@
             label3 = new Label();
             textBox1 = new TextBox();
             panel4 = new Panel();
+<<<<<<< HEAD
+=======
+            button1 = new Button();
+>>>>>>> project-merge/master
             dataGridView1 = new DataGridView();
             button4 = new Button();
             button3 = new Button();
@@ -216,6 +220,10 @@
             // panel4
             // 
             panel4.BackColor = Color.White;
+<<<<<<< HEAD
+=======
+            panel4.Controls.Add(button1);
+>>>>>>> project-merge/master
             panel4.Controls.Add(dataGridView1);
             panel4.Controls.Add(button4);
             panel4.Controls.Add(button3);
@@ -227,6 +235,22 @@
             panel4.Size = new Size(559, 321);
             panel4.TabIndex = 4;
             // 
+<<<<<<< HEAD
+=======
+            // button1
+            // 
+            button1.BackColor = Color.ForestGreen;
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(399, 266);
+            button1.Name = "button1";
+            button1.Size = new Size(143, 36);
+            button1.TabIndex = 21;
+            button1.Text = "Update Book Info";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+>>>>>>> project-merge/master
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = SystemColors.ControlLight;
@@ -243,7 +267,11 @@
             button4.BackColor = Color.Crimson;
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             button4.Location = new Point(418, 266);
+=======
+            button4.Location = new Point(162, 266);
+>>>>>>> project-merge/master
             button4.Name = "button4";
             button4.Size = new Size(114, 36);
             button4.TabIndex = 19;
@@ -343,5 +371,9 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
+<<<<<<< HEAD
+=======
+        private Button button1;
+>>>>>>> project-merge/master
     }
 }
