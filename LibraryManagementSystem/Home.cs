@@ -16,7 +16,7 @@ namespace LibraryManagementSystem
         {
             InitializeComponent();
         }
-
+        // Event Handler for add books button
         private void addBookBtn_Click(object sender, EventArgs e)
         {
             addBooks addb = new addBooks();
@@ -24,6 +24,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for view books button
         private void viewBookBtn_Click(object sender, EventArgs e)
         {
             viewBooks viewBooks = new viewBooks();
@@ -31,6 +32,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for issue books button
         private void issueBookBtn_Click(object sender, EventArgs e)
         {
             issueBooks issueBooks = new issueBooks();
@@ -38,6 +40,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for add student button
         private void addStudentBtn_Click(object sender, EventArgs e)
         {
             addStudents addStudents = new addStudents();
@@ -45,6 +48,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for view student info button
         private void viewStudentInfoBtn_Click(object sender, EventArgs e)
         {
             viewStudentInfo viewStudentInfo = new viewStudentInfo();
@@ -52,6 +56,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for exit button
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
