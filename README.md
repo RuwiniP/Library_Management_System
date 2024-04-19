@@ -18,6 +18,9 @@ collection of books.
 
 View the complete guide for the project idea from [here.](https://stuconestogacon-my.sharepoint.com/:b:/g/personal/dperera4821_conestogac_on_ca/EQx8O2_YgS5CjLhFESwYpkMB-3tT20e80QVZU1iULLZTPA?e=YUXyFQ)
 
+Want to see the Library Management System in action? Check out our demo [here!](https://youtu.be/qBY2SB3zKEw?si=tqUX8ap0ehIesG1e)
+
+
 ## Prerequisites
 ### 1.Visual Studio:
 * Download and install Visual Studio IDE from the official website: [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/)
