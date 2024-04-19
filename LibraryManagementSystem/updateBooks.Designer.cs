@@ -36,7 +36,6 @@
             label1 = new Label();
             panel2 = new Panel();
             button5 = new Button();
-            button9 = new Button();
             button10 = new Button();
             button8 = new Button();
             button6 = new Button();
@@ -60,6 +59,7 @@
             Quantity = new TextBox();
             AName = new TextBox();
             PName = new TextBox();
+            button2 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -113,8 +113,8 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.GradientInactiveCaption;
+            panel2.Controls.Add(button2);
             panel2.Controls.Add(button5);
-            panel2.Controls.Add(button9);
             panel2.Controls.Add(button10);
             panel2.Controls.Add(button8);
             panel2.Controls.Add(button6);
@@ -136,18 +136,6 @@
             button5.Text = "View Books";
             button5.UseVisualStyleBackColor = false;
             // 
-            // button9
-            // 
-            button9.BackColor = SystemColors.GradientInactiveCaption;
-            button9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.Location = new Point(12, 27);
-            button9.Name = "button9";
-            button9.Size = new Size(170, 43);
-            button9.TabIndex = 10;
-            button9.Text = "Add Books";
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += searchBtn_Click;
-            // 
             // button10
             // 
             button10.BackColor = SystemColors.GradientInactiveCaption;
@@ -159,6 +147,7 @@
             button10.TabIndex = 21;
             button10.Text = "View Student Info";
             button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
             // 
             // button8
             // 
@@ -170,6 +159,7 @@
             button8.TabIndex = 9;
             button8.Text = "Issue Books";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click_1;
             // 
             // button6
             // 
@@ -181,6 +171,7 @@
             button6.TabIndex = 7;
             button6.Text = "Exit";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click_1;
             // 
             // button1
             // 
@@ -193,6 +184,7 @@
             button1.TabIndex = 2;
             button1.Text = "Add Students";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel3
             // 
@@ -385,6 +377,18 @@
             PName.Size = new Size(125, 27);
             PName.TabIndex = 4;
             // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.GradientInactiveCaption;
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(12, 27);
+            button2.Name = "button2";
+            button2.Size = new Size(170, 43);
+            button2.TabIndex = 22;
+            button2.Text = "Add Books";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // updateBooks
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -437,11 +441,11 @@
         private Button updateBtn;
         private Label label10;
         private TextBox Price;
-        private Button button9;
         private Button button8;
         private Button button1;
         private Button searchBtn;
         private Button button5;
         private Button button10;
+        private Button button2;
     }
 }

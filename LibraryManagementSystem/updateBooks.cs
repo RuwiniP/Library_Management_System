@@ -108,9 +108,7 @@ namespace LibraryManagementSystem
 
         private void button8_Click(object sender, EventArgs e)
         {
-            issueBooks issueBooks = new issueBooks();
-            issueBooks.Show();
-            this.Hide();
+
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -122,9 +120,7 @@ namespace LibraryManagementSystem
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
-            this.Hide();
+
         }
 
 
@@ -143,7 +139,9 @@ namespace LibraryManagementSystem
 
         private void button10_Click_1(object sender, EventArgs e)
         {
-
+            viewStudentInfo studentInfo = new viewStudentInfo();
+            studentInfo.Show();
+            this.Hide();
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
@@ -216,9 +214,38 @@ namespace LibraryManagementSystem
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.Show();
+            viewBooks viewBooks = new viewBooks();
+            viewBooks.Show();
             this.Close();
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            issueBooks issueBooks = new issueBooks();
+            issueBooks.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            addStudents addStudents = new addStudents();
+            addStudents.Show();
+            this.Hide();
+        }
+
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            addBooks addBooks = new addBooks();
+            addBooks.Show();
+            this.Hide();
         }
     }
 }
