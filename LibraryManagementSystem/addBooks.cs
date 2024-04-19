@@ -74,42 +74,42 @@ namespace LibraryManagementSystem
             return true; // Validation succeeded
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void viewBookBtn_Click(object sender, EventArgs e)
         {
             viewBooks vb = new viewBooks();
             vb.Show();
             this.Hide();
         }
 
-        private void button8_Click_1(object sender, EventArgs e)
+        private void issueBookBtn_Click(object sender, EventArgs e)
         {
             issueBooks ib = new issueBooks();
             ib.Show();
             this.Hide();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void addStudentBtn_Click(object sender, EventArgs e)
         {
             addStudents addStudents = new addStudents();
             addStudents.Show();
             this.Hide();
         }
 
-        private void button10_Click_1(object sender, EventArgs e)
+        private void viewStudentInfoBtn_Click(object sender, EventArgs e)
         {
             viewStudentInfo vsi = new viewStudentInfo();
             vsi.Show();
             this.Hide();
         }
 
-        private void button6_Click_1(object sender, EventArgs e)
+        private void exitBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void clearBtn_Click(object sender, EventArgs e)
         {
             bookName.Text = "";
             isbn.Text = "";
@@ -120,7 +120,7 @@ namespace LibraryManagementSystem
             qty.Text = "";
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void cancelBtn_Click(object sender, EventArgs e)
         {
             Home home = new Home();
             home.Show();

@@ -112,42 +112,42 @@ namespace LibraryManagementSystem
         }
 
 
-        private void button9_Click(object sender, EventArgs e)
+        private void addBooksBtn_Click(object sender, EventArgs e)
         {
             addBooks addBooks = new addBooks();
             addBooks.Show();
             this.Hide();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void viewBooksBtn_Click(object sender, EventArgs e)
         {
             viewBooks viewBooks = new viewBooks();
             viewBooks.Show();
             this.Hide();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void issueBooksBtn_Click(object sender, EventArgs e)
         {
             issueBooks issueBooks = new issueBooks();
             issueBooks.Show();
             this.Hide();
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void viewStudentInfoBtn_Click(object sender, EventArgs e)
         {
             viewStudentInfo studentInfo = new viewStudentInfo();
             studentInfo.Show();
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void exitBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void clearBtn_Click(object sender, EventArgs e)
         {
             SID.Text = "";
             Sname.Text = "";
@@ -158,7 +158,7 @@ namespace LibraryManagementSystem
             Semester.Text = "";
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void cancelBtn_Click(object sender, EventArgs e)
         {
             Home home = new Home();
             home.Show();
