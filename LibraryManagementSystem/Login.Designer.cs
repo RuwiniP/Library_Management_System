@@ -85,6 +85,7 @@
             passwordTxt.Name = "passwordTxt";
             passwordTxt.Size = new Size(169, 27);
             passwordTxt.TabIndex = 5;
+            passwordTxt.PasswordChar = '*';
             // 
             // label3
             // 
