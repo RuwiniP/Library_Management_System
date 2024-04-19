@@ -67,7 +67,8 @@ git clone https://github.com/RuwiniP/Library_Management_System.git
 * Make sure you have followed all the DB Setup Instructions before you run the project.
 * Upon Succesful run you could see the below login page:
 
-![image](https://github.com/RuwiniP/Library_Management_System/assets/31927767/403eb746-0b39-4315-bfe2-0b0d22999e82)
+![image](https://github.com/RuwiniP/Library_Management_System/assets/31927767/f7f0508b-b806-4ebb-94df-e17381c15b39)
+
 
 We hope you find it useful and efficient for managing your library's resources. If you have any questions, feedback, or suggestions for improvement, please don't hesitate to reach out.
 
