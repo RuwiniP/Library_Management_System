@@ -21,11 +21,11 @@ View the complete guide for the project idea from [here.](https://stuconestogaco
 ## DataBase Setup Instructions
 
 ### 1.Download the Database Extract SQL File:
-*Navigate to the db_setup folder in the repository.
-*Locate the SQL file named [librarymanagementsystem](https://github.com/RuwiniP/Library_Management_System/blob/master/DBSetup/librarymanagementsystem.sql).sql.
+* Navigate to the db_setup folder in the repository.
+* Locate the SQL file named [librarymanagementsystem](https://github.com/RuwiniP/Library_Management_System/blob/master/DBSetup/librarymanagementsystem.sql).sql.
 
 ### 2.Import SQL File into phpMyAdmin:
-*Log in to your phpMyAdmin dashboard.
+* Log in to your phpMyAdmin dashboard.
 *Click on the "Import" tab.
 *Choose the SQL file you downloaded in step 1.
 *Click "Go" to initiate the import process.
