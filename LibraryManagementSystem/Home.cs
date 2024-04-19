@@ -12,6 +12,7 @@ namespace LibraryManagementSystem
 {
     public partial class Home : Form
     {
+        // Initializing home page
         public Home()
         {
             InitializeComponent();

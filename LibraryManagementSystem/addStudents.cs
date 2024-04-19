@@ -14,13 +14,16 @@ namespace LibraryManagementSystem
     public partial class addStudents : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=libraryManagementSystem");
+        // Initializing add students window
         public addStudents()
         {
             InitializeComponent();
         }
 
+        //Event Handler for save button
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            // Validating user input
             if (ValidateInput())
             {
 
@@ -48,6 +51,7 @@ namespace LibraryManagementSystem
             con.Close();
         }
 
+        // Method to validate user inputs before adding students data into database
         private bool ValidateInput()
         {
             // Check if any of the required fields are empty
@@ -111,7 +115,7 @@ namespace LibraryManagementSystem
             return true; // Validation succeeded
         }
 
-
+        // Event Handler for add books button
         private void addBooksBtn_Click(object sender, EventArgs e)
         {
             addBooks addBooks = new addBooks();
@@ -119,6 +123,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for view books button
         private void viewBooksBtn_Click(object sender, EventArgs e)
         {
             viewBooks viewBooks = new viewBooks();
@@ -126,6 +131,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for issue books button
         private void issueBooksBtn_Click(object sender, EventArgs e)
         {
             issueBooks issueBooks = new issueBooks();
@@ -133,6 +139,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for view student info button
         private void viewStudentInfoBtn_Click(object sender, EventArgs e)
         {
             viewStudentInfo studentInfo = new viewStudentInfo();
@@ -140,6 +147,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for exit button
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
@@ -147,6 +155,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for clear button
         private void clearBtn_Click(object sender, EventArgs e)
         {
             SID.Text = "";
@@ -158,6 +167,7 @@ namespace LibraryManagementSystem
             Semester.Text = "";
         }
 
+        // Event Handler for cancel button
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             Home home = new Home();

@@ -7,13 +7,14 @@ namespace LibraryManagementSystem
     {
 
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=libraryManagementSystem");
-
+        // Initializing login page
         public Login()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Normal;
         }
 
+        // Event Handler for Login button, verify the fields and provide access if valid user
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             string username = this.usernameTxt.Text;

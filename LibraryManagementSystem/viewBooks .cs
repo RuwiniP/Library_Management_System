@@ -15,11 +15,13 @@ namespace LibraryManagementSystem
     public partial class viewBooks : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=libraryManagementSystem");
+        // Initializing the view books window
         public viewBooks()
         {
             InitializeComponent();
         }
 
+        // Event Handler for search button
         private void searchBtn_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(textBox1.Text))
@@ -49,13 +51,8 @@ namespace LibraryManagementSystem
                 }
             }
         }
-        
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        // Event Handler for add books button
         private void addBooksBtn_Click(object sender, EventArgs e)
         {
             addBooks ab = new addBooks();
@@ -63,6 +60,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for issue books button
         private void issueBooksBtn_Click(object sender, EventArgs e)
         {
             issueBooks ib = new issueBooks();
@@ -70,6 +68,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for add student button
         private void addStudentBtn_Click(object sender, EventArgs e)
         {
             addStudents ads = new addStudents();
@@ -77,6 +76,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for view student info button
         private void viewStudentInfoBtn_Click(object sender, EventArgs e)
         {
             viewStudentInfo vsi = new viewStudentInfo();
@@ -84,6 +84,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for exit button
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
@@ -91,12 +92,14 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for clear button
         private void clearBtn_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
             dataGridView1.DataSource = null;
         }
 
+        // Event Handler for cancel button
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             Home home = new Home();
@@ -104,6 +107,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for update button
         private void updateBtn_Click(object sender, EventArgs e)
         {
             updateBooks updateBooks = new updateBooks();

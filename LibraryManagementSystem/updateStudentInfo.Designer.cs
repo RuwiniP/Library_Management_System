@@ -379,7 +379,6 @@
             label4.Size = new Size(111, 20);
             label4.TabIndex = 8;
             label4.Text = "Student Name :";
-            label4.Click += label4_Click;
             // 
             // SID
             // 

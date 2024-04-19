@@ -16,11 +16,13 @@ namespace LibraryManagementSystem
     public partial class viewStudentInfo : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=libraryManagementSystem");
+        // Initializing view student info window
         public viewStudentInfo()
         {
             InitializeComponent();
         }
 
+        // Event Handler for search button
         private void searchBtn_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(textBox1.Text))
@@ -55,6 +57,7 @@ namespace LibraryManagementSystem
 
         }
 
+        // Event Handler for add books button
         private void addBooksBtn_Click(object sender, EventArgs e)
         {
             addBooks addBooks = new addBooks();
@@ -62,6 +65,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for view books button
         private void viewBooksBtn_Click(object sender, EventArgs e)
         {
             viewBooks viewBooks = new viewBooks();
@@ -69,6 +73,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for issue books button
         private void issueBooksBtn_Click(object sender, EventArgs e)
         {
             issueBooks issueBooks = new issueBooks();
@@ -76,6 +81,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for add student button
         private void addStudentBtn_Click(object sender, EventArgs e)
         {
             addStudents addStudents = new addStudents();
@@ -83,6 +89,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for exit button
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
@@ -90,12 +97,14 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for clear button
         private void clearBtn_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
             dataGridView1.DataSource = null;
         }
 
+        // Event Handler for cancel button
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             Home home = new Home();
@@ -103,6 +112,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
+        // Event Handler for update button
         private void updateBtn_Click(object sender, EventArgs e)
         {
             updateStudentInfo updateStudentInfo = new updateStudentInfo();
