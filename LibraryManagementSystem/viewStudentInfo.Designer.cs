@@ -35,20 +35,20 @@
             label2 = new Label();
             label1 = new Label();
             panel2 = new Panel();
-            button7 = new Button();
+            addBooksBtn = new Button();
             button5 = new Button();
-            button10 = new Button();
-            button9 = new Button();
-            button8 = new Button();
-            button6 = new Button();
+            viewBooksBtn = new Button();
+            addStudentBtn = new Button();
+            issueBooksBtn = new Button();
+            exitBtn = new Button();
             panel3 = new Panel();
             label3 = new Label();
             textBox1 = new TextBox();
             panel4 = new Panel();
-            button1 = new Button();
+            updateBtn = new Button();
             dataGridView1 = new DataGridView();
-            button4 = new Button();
-            button3 = new Button();
+            cancelBtn = new Button();
+            clearBtn = new Button();
             searchBtn = new Button();
             label4 = new Label();
             panel1.SuspendLayout();
@@ -105,28 +105,28 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.GradientInactiveCaption;
-            panel2.Controls.Add(button7);
+            panel2.Controls.Add(addBooksBtn);
             panel2.Controls.Add(button5);
-            panel2.Controls.Add(button10);
-            panel2.Controls.Add(button9);
-            panel2.Controls.Add(button8);
-            panel2.Controls.Add(button6);
+            panel2.Controls.Add(viewBooksBtn);
+            panel2.Controls.Add(addStudentBtn);
+            panel2.Controls.Add(issueBooksBtn);
+            panel2.Controls.Add(exitBtn);
             panel2.Location = new Point(0, 37);
             panel2.Name = "panel2";
             panel2.Size = new Size(195, 417);
             panel2.TabIndex = 1;
             // 
-            // button7
+            // addBooksBtn
             // 
-            button7.BackColor = SystemColors.GradientInactiveCaption;
-            button7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.Location = new Point(12, 32);
-            button7.Name = "button7";
-            button7.Size = new Size(170, 43);
-            button7.TabIndex = 13;
-            button7.Text = "Add Books";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
+            addBooksBtn.BackColor = SystemColors.GradientInactiveCaption;
+            addBooksBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addBooksBtn.Location = new Point(12, 32);
+            addBooksBtn.Name = "addBooksBtn";
+            addBooksBtn.Size = new Size(170, 43);
+            addBooksBtn.TabIndex = 13;
+            addBooksBtn.Text = "Add Books";
+            addBooksBtn.UseVisualStyleBackColor = false;
+            addBooksBtn.Click += addBooksBtn_Click;
             // 
             // button5
             // 
@@ -140,53 +140,53 @@
             button5.Text = "View Student Info";
             button5.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // viewBooksBtn
             // 
-            button10.BackColor = SystemColors.GradientInactiveCaption;
-            button10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button10.Location = new Point(12, 96);
-            button10.Name = "button10";
-            button10.Size = new Size(170, 43);
-            button10.TabIndex = 11;
-            button10.Text = "View Books";
-            button10.UseVisualStyleBackColor = false;
-            button10.Click += button10_Click;
+            viewBooksBtn.BackColor = SystemColors.GradientInactiveCaption;
+            viewBooksBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            viewBooksBtn.Location = new Point(12, 96);
+            viewBooksBtn.Name = "viewBooksBtn";
+            viewBooksBtn.Size = new Size(170, 43);
+            viewBooksBtn.TabIndex = 11;
+            viewBooksBtn.Text = "View Books";
+            viewBooksBtn.UseVisualStyleBackColor = false;
+            viewBooksBtn.Click += viewBooksBtn_Click;
             // 
-            // button9
+            // addStudentBtn
             // 
-            button9.BackColor = SystemColors.GradientInactiveCaption;
-            button9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.Location = new Point(12, 225);
-            button9.Name = "button9";
-            button9.Size = new Size(170, 43);
-            button9.TabIndex = 10;
-            button9.Text = "Add Students";
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
+            addStudentBtn.BackColor = SystemColors.GradientInactiveCaption;
+            addStudentBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addStudentBtn.Location = new Point(12, 225);
+            addStudentBtn.Name = "addStudentBtn";
+            addStudentBtn.Size = new Size(170, 43);
+            addStudentBtn.TabIndex = 10;
+            addStudentBtn.Text = "Add Students";
+            addStudentBtn.UseVisualStyleBackColor = false;
+            addStudentBtn.Click += addStudentBtn_Click;
             // 
-            // button8
+            // issueBooksBtn
             // 
-            button8.BackColor = SystemColors.GradientInactiveCaption;
-            button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.Location = new Point(12, 162);
-            button8.Name = "button8";
-            button8.Size = new Size(170, 43);
-            button8.TabIndex = 9;
-            button8.Text = "Issue Books";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
+            issueBooksBtn.BackColor = SystemColors.GradientInactiveCaption;
+            issueBooksBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            issueBooksBtn.Location = new Point(12, 162);
+            issueBooksBtn.Name = "issueBooksBtn";
+            issueBooksBtn.Size = new Size(170, 43);
+            issueBooksBtn.TabIndex = 9;
+            issueBooksBtn.Text = "Issue Books";
+            issueBooksBtn.UseVisualStyleBackColor = false;
+            issueBooksBtn.Click += issueBooksBtn_Click;
             // 
-            // button6
+            // exitBtn
             // 
-            button6.BackColor = Color.AliceBlue;
-            button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.Location = new Point(12, 358);
-            button6.Name = "button6";
-            button6.Size = new Size(170, 43);
-            button6.TabIndex = 7;
-            button6.Text = "Exit";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
+            exitBtn.BackColor = Color.AliceBlue;
+            exitBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            exitBtn.Location = new Point(12, 358);
+            exitBtn.Name = "exitBtn";
+            exitBtn.Size = new Size(170, 43);
+            exitBtn.TabIndex = 7;
+            exitBtn.Text = "Exit";
+            exitBtn.UseVisualStyleBackColor = false;
+            exitBtn.Click += exitBtn_Click;
             // 
             // panel3
             // 
@@ -217,10 +217,10 @@
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Controls.Add(button1);
+            panel4.Controls.Add(updateBtn);
             panel4.Controls.Add(dataGridView1);
-            panel4.Controls.Add(button4);
-            panel4.Controls.Add(button3);
+            panel4.Controls.Add(cancelBtn);
+            panel4.Controls.Add(clearBtn);
             panel4.Controls.Add(searchBtn);
             panel4.Controls.Add(label4);
             panel4.Controls.Add(textBox1);
@@ -229,19 +229,19 @@
             panel4.Size = new Size(559, 321);
             panel4.TabIndex = 4;
             // 
-            // button1
+            // updateBtn
             // 
-            button1.BackColor = Color.Teal;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(368, 266);
-            button1.Name = "button1";
-            button1.Size = new Size(164, 36);
-            button1.TabIndex = 21;
-            button1.Text = "Update Student Info";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            updateBtn.BackColor = Color.Teal;
+            updateBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            updateBtn.ForeColor = SystemColors.ButtonHighlight;
+            updateBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            updateBtn.Location = new Point(368, 266);
+            updateBtn.Name = "updateBtn";
+            updateBtn.Size = new Size(164, 36);
+            updateBtn.TabIndex = 21;
+            updateBtn.Text = "Update Student Info";
+            updateBtn.UseVisualStyleBackColor = false;
+            updateBtn.Click += updateBtn_Click;
             // 
             // dataGridView1
             // 
@@ -253,31 +253,31 @@
             dataGridView1.Size = new Size(517, 195);
             dataGridView1.TabIndex = 20;
             // 
-            // button4
+            // cancelBtn
             // 
-            button4.BackColor = Color.Crimson;
-            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = SystemColors.ButtonHighlight;
-            button4.Location = new Point(177, 266);
-            button4.Name = "button4";
-            button4.Size = new Size(114, 36);
-            button4.TabIndex = 19;
-            button4.Text = "Cancel";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            cancelBtn.BackColor = Color.Crimson;
+            cancelBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cancelBtn.ForeColor = SystemColors.ButtonHighlight;
+            cancelBtn.Location = new Point(177, 266);
+            cancelBtn.Name = "cancelBtn";
+            cancelBtn.Size = new Size(114, 36);
+            cancelBtn.TabIndex = 19;
+            cancelBtn.Text = "Cancel";
+            cancelBtn.UseVisualStyleBackColor = false;
+            cancelBtn.Click += cancelBtn_Click;
             // 
-            // button3
+            // clearBtn
             // 
-            button3.BackColor = Color.Gray;
-            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(29, 266);
-            button3.Name = "button3";
-            button3.Size = new Size(114, 36);
-            button3.TabIndex = 18;
-            button3.Text = "Clear";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            clearBtn.BackColor = Color.Gray;
+            clearBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            clearBtn.ForeColor = SystemColors.ButtonHighlight;
+            clearBtn.Location = new Point(29, 266);
+            clearBtn.Name = "clearBtn";
+            clearBtn.Size = new Size(114, 36);
+            clearBtn.TabIndex = 18;
+            clearBtn.Text = "Clear";
+            clearBtn.UseVisualStyleBackColor = false;
+            clearBtn.Click += clearBtn_Click;
             // 
             // searchBtn
             // 
@@ -335,21 +335,21 @@
         private Label label2;
         private Label label1;
         private Panel panel2;
-        private Button button6;
-        private Button button9;
-        private Button button8;
-        private Button button10;
+        private Button exitBtn;
+        private Button addStudentBtn;
+        private Button issueBooksBtn;
+        private Button viewBooksBtn;
         private Panel panel3;
         private Label label3;
         private TextBox textBox1;
         private Panel panel4;
         private Label label4;
-        private Button button4;
-        private Button button3;
+        private Button cancelBtn;
+        private Button clearBtn;
         private Button searchBtn;
-        private Button button7;
+        private Button addBooksBtn;
         private Button button5;
         private DataGridView dataGridView1;
-        private Button button1;
+        private Button updateBtn;
     }
 }
