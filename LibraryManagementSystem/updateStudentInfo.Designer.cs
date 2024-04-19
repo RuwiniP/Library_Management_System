@@ -265,11 +265,8 @@
             // 
             // button4
             // 
-<<<<<<< HEAD
-            button4.BackColor = Color.Crimson;
-=======
+
             button4.BackColor = SystemColors.ControlDarkDark;
->>>>>>> project-merge/master
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = SystemColors.ButtonHighlight;
             button4.Location = new Point(394, 266);
@@ -282,11 +279,8 @@
             // 
             // button3
             // 
-<<<<<<< HEAD
-            button3.BackColor = Color.Gray;
-=======
+
             button3.BackColor = Color.Crimson;
->>>>>>> project-merge/master
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = SystemColors.ButtonHighlight;
             button3.Location = new Point(219, 266);
