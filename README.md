@@ -18,6 +18,17 @@ collection of books.
 
 View the complete guide for the project idea from [here.](https://stuconestogacon-my.sharepoint.com/:b:/g/personal/dperera4821_conestogac_on_ca/EQx8O2_YgS5CjLhFESwYpkMB-3tT20e80QVZU1iULLZTPA?e=YUXyFQ)
 
+## Prerequisites
+### 1.Visual Studio:
+* Download and install Visual Studio IDE from the official website: [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/)
+
+### 2.XAMPP:
+* Download and install XAMPP, which includes Apache, MySQL, PHP, and phpMyAdmin, from the Apache Friends website: [XAMPP Downloads](https://www.apachefriends.org/download.html)
+* Once installed, start the XAMPP Control Panel.
+* Start the Apache and MySQL modules by clicking on their respective "Start" buttons.
+* Open your web browser and navigate to http://localhost/phpmyadmin/.
+* This will open the phpMyAdmin interface where you can manage your MySQL databases.
+
 ## DataBase Setup Instructions
 
 ### 1.Download the Database Extract SQL File:
@@ -26,11 +37,24 @@ View the complete guide for the project idea from [here.](https://stuconestogaco
 
 ### 2.Import SQL File into phpMyAdmin:
 * Log in to your phpMyAdmin dashboard.
-*Click on the "Import" tab.
-*Choose the SQL file you downloaded in step 1.
-*Click "Go" to initiate the import process.
+* Select the database where you want to import the SQL file.
+* Click on the "Import" tab.
+* Choose the SQL file you downloaded in step 1.
+* Click "Go" to initiate the import process.
 
 ### 3.Verify Database Import:
-Once the import process is complete, you should see a success message.
-*Verify that the database tables and data have been imported correctly.
-*Upon succesful import you could see the 'librarymanagementsystem' db created in your db org hierarchy.
+* Once the import process is complete, you should see a success message.
+* Verify that the database tables and data have been imported correctly.
+* Upon succesful import you could see the database tables created through the import.
+
+  ![image](https://github.com/RuwiniP/Library_Management_System/assets/31927767/2c83b0bc-9d29-47c1-b086-9481110942ec)
+
+  ## Project Setup Instructions
+
+### 1.Clone the Repository:
+* Open a terminal or command prompt.
+* Run the following command to clone the repository to your local machine:
+~~~
+git clone https://github.com/RuwiniP/Library_Management_System.git
+~~~
+
