@@ -95,7 +95,7 @@ namespace LibraryManagementSystem
             }
 
             // Validate that Sname contains only alphabetic characters
-            if (!Sname.Text.All(char.IsLetter))
+            if (!Sname.Text.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
             {
                 // Display an error message if Sname contains non-alphabetic characters
                 MessageBox.Show("Student name should contain only alphabetic characters.");

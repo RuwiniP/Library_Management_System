@@ -22,15 +22,34 @@ namespace LibraryManagementSystem
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            con.Open();
+            if (!string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                DBAccess db1 = new DBAccess();
+                string query2 = ("SELECT COUNT(*) FROM BOOK where book_name = '" + textBox1.Text + "' OR ISBN = '" + textBox1.Text + "'");
+                using (MySqlCommand command = new MySqlCommand(query2, con))
+                {
+                    con.Open();
+                    int count = Convert.ToInt32(command.ExecuteScalar());
 
-            MySqlDataAdapter view_t = new MySqlDataAdapter("select book_id,book_name,ISBN,author,publisher,category,price,quantity from book where book_name = '" + textBox1.Text + "' OR ISBN = '" + textBox1.Text + "'", con);
-            DataTable DT3 = new DataTable();
+                    if (count > 0)
 
-            view_t.Fill(DT3);
-            dataGridView1.DataSource = DT3;
-            con.Close();
+                    {
+                        MySqlDataAdapter view_t = new MySqlDataAdapter("select book_id,book_name,ISBN,author,publisher,category,price,quantity from book where book_name = '" + textBox1.Text + "' OR ISBN = '" + textBox1.Text + "'", con);
+                        DataTable DT3 = new DataTable();
+                        view_t.Fill(DT3);
+                        dataGridView1.DataSource = DT3;
+                        con.Close();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Book Data does not exist");
+                        con.Close();
+                    }
+                }
+            }
         }
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

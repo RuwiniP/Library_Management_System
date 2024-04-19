@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,17 +23,39 @@ namespace LibraryManagementSystem
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            con.Open();
+            if (!string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                DBAccess db1 = new DBAccess();
+                string query2 = ("SELECT COUNT(*) FROM STUDENT where enrollment_No = '" + textBox1.Text + "'");
+                using (MySqlCommand command = new MySqlCommand(query2, con))
+                {
+                    con.Open();
+                    int count = Convert.ToInt32(command.ExecuteScalar());
 
-            MySqlDataAdapter view_t = new MySqlDataAdapter("select enrollment_No , student_name , student_email , student_contact ,enrolled_campus , department , enrolled_semester  from student where enrollment_No = '" + textBox1.Text + "'", con);
-            DataTable DT3 = new DataTable();
+                    if (count > 0)
 
-            view_t.Fill(DT3);
-            dataGridView1.DataSource = DT3;
-            con.Close();
+                    {
+                        
+                        MySqlDataAdapter view_t = new MySqlDataAdapter("select enrollment_No , student_name , student_email , student_contact ,enrolled_campus , department , enrolled_semester  from student where enrollment_No = '" + textBox1.Text + "'", con);
+                        DataTable DT3 = new DataTable();
+
+                        view_t.Fill(DT3);
+                        dataGridView1.DataSource = DT3;
+                        con.Close();
+                    }
+
+                    else
+                    {
+
+                        MessageBox.Show("Student Data does not exist");
+                        con.Close();
+                    }
+
+                }
+            }
+
         }
-
-        private void button7_Click(object sender, EventArgs e)
+                    private void button7_Click(object sender, EventArgs e)
         {
             addBooks addBooks = new addBooks();
             addBooks.Show();
