@@ -259,7 +259,7 @@
             // 
             // backBtn
             // 
-            backBtn.BackColor = Color.SlateBlue;
+            backBtn.BackColor = SystemColors.ControlDarkDark;
             backBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             backBtn.ForeColor = SystemColors.ButtonHighlight;
             backBtn.Location = new Point(394, 266);
@@ -268,6 +268,7 @@
             backBtn.TabIndex = 19;
             backBtn.Text = "Back";
             backBtn.UseVisualStyleBackColor = false;
+            backBtn.Click += backBtn_Click;
             // 
             // deleteBtn
             // 

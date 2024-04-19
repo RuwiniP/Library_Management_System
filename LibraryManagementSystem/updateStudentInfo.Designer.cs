@@ -265,7 +265,7 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.Crimson;
+            button4.BackColor = SystemColors.ControlDarkDark;
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = SystemColors.ButtonHighlight;
             button4.Location = new Point(394, 266);
@@ -278,7 +278,7 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.Gray;
+            button3.BackColor = Color.Crimson;
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = SystemColors.ButtonHighlight;
             button3.Location = new Point(219, 266);

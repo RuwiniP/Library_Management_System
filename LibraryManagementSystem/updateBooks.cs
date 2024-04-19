@@ -127,7 +127,7 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
-        
+
         private void button4_Click(object sender, EventArgs e)
         {
             viewStudentInfo viewStudentInfo = new viewStudentInfo();
@@ -212,6 +212,13 @@ namespace LibraryManagementSystem
                 MessageBox.Show("Please enter ISBN");
             }
 
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Close();
         }
     }
 }
