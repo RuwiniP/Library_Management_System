@@ -21,7 +21,7 @@ namespace LibraryManagementSystem
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void searchBtn_Click(object sender, EventArgs e)
         {
             con.Open();
 
@@ -142,21 +142,21 @@ namespace LibraryManagementSystem
         }
 
 
-        private void button9_Click(object sender, EventArgs e)
+        private void addBooksBtn_Click(object sender, EventArgs e)
         {
             addBooks addBooks = new addBooks();
             addBooks.Show();
             this.Hide();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void viewBooksBtn_Click(object sender, EventArgs e)
         {
             viewBooks viewBooks = new viewBooks();
             viewBooks.Show();
             this.Hide();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void issueBooksBtn_Click(object sender, EventArgs e)
         {
             issueBooks issueBooks = new issueBooks();
             issueBooks.Show();
@@ -170,14 +170,14 @@ namespace LibraryManagementSystem
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void exitBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void deleteBtn_Click(object sender, EventArgs e)
         {
 
             if (!string.IsNullOrWhiteSpace(SID.Text))
@@ -189,7 +189,7 @@ namespace LibraryManagementSystem
                     using (MySqlCommand command = new MySqlCommand(query2, con))
                     {
                         con.Open();
-                        int count = Convert.ToInt32(command.ExecuteScalar()); 
+                        int count = Convert.ToInt32(command.ExecuteScalar());
 
                         if (count > 0)
                         {
@@ -217,10 +217,10 @@ namespace LibraryManagementSystem
             {
                 MessageBox.Show("Please enter Enrollment ID");
             }
-  
+
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
             viewStudentInfo viewStudentInfo = new viewStudentInfo();
             viewStudentInfo.Show();
@@ -233,5 +233,11 @@ namespace LibraryManagementSystem
 
         }
 
+        private void addStudentsBtn_Click(object sender, EventArgs e)
+        {
+            addStudents addStudents = new addStudents();
+            addStudents.Show();
+            this.Hide();
+        }
     }
 }

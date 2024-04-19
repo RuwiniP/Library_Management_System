@@ -14,11 +14,6 @@ namespace LibraryManagementSystem
             this.WindowState = FormWindowState.Normal;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             string username = this.usernameTxt.Text;

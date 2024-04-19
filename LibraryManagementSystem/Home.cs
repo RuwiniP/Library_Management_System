@@ -17,42 +17,42 @@ namespace LibraryManagementSystem
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void addBookBtn_Click(object sender, EventArgs e)
         {
             addBooks addb = new addBooks();
             addb.Show();
             this.Hide();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void viewBookBtn_Click(object sender, EventArgs e)
         {
             viewBooks viewBooks = new viewBooks();
             viewBooks.Show();
             this.Hide();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void issueBookBtn_Click(object sender, EventArgs e)
         {
             issueBooks issueBooks = new issueBooks();
             issueBooks.Show();
             this.Hide();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void addStudentBtn_Click(object sender, EventArgs e)
         {
             addStudents addStudents = new addStudents();
             addStudents.Show();
             this.Hide();
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void viewStudentInfoBtn_Click(object sender, EventArgs e)
         {
             viewStudentInfo viewStudentInfo = new viewStudentInfo();
             viewStudentInfo.Show();
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void exitBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();

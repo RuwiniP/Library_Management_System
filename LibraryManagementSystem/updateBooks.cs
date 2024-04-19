@@ -111,7 +111,7 @@ namespace LibraryManagementSystem
 
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void viewStudentInfoBtn_Click(object sender, EventArgs e)
         {
             viewStudentInfo studentInfo = new viewStudentInfo();
             studentInfo.Show();
@@ -219,14 +219,14 @@ namespace LibraryManagementSystem
             this.Close();
         }
 
-        private void button8_Click_1(object sender, EventArgs e)
+        private void issueBooksBtn_Click(object sender, EventArgs e)
         {
             issueBooks issueBooks = new issueBooks();
             issueBooks.Show();
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void addStudentsBtn_Click(object sender, EventArgs e)
         {
             addStudents addStudents = new addStudents();
             addStudents.Show();
@@ -234,14 +234,14 @@ namespace LibraryManagementSystem
         }
 
 
-        private void button6_Click_1(object sender, EventArgs e)
+        private void exitBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void addBooksBtn_Click(object sender, EventArgs e)
         {
             addBooks addBooks = new addBooks();
             addBooks.Show();
