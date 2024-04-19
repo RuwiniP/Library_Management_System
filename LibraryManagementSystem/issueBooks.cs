@@ -52,20 +52,62 @@ namespace LibraryManagementSystem
         }
         private void issueBookBtn_Click(object sender, EventArgs e)
         {
-            DBAccess db = new DBAccess();
-            string query = "INSERT INTO issueBook(enrollment_No,ISBN,issue_Date) VALUES ('" + textBox1.Text + "','" + isbn.Text + "','" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "')";
-            db.insertData(query);
             try
             {
-                MessageBox.Show("You have succesfully issued the book");
+                // Check if the student ID and ISBN are provided
+                if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(isbn.Text))
+                {
+                    MessageBox.Show("Please enter both the student's enrollment number and the book's ISBN.");
+                    return;
+                }
+
+                // Check if the student exists in the database
+                DBAccess db = new DBAccess();
+                string studentCheckQuery = "SELECT COUNT(*) FROM student WHERE enrollment_No = '" + textBox1.Text + "'";
+                int studentCount = Convert.ToInt32(db.GetScalarValue(studentCheckQuery));
+
+                if (studentCount == 0)
+                {
+                    MessageBox.Show("The provided enrollment number does not exist in the database.");
+                    return;
+                }
+
+                // Check if the book exists in the database
+                string bookCheckQuery = "SELECT COUNT(*) FROM book WHERE ISBN = '" + isbn.Text + "'";
+                int bookCount = Convert.ToInt32(db.GetScalarValue(bookCheckQuery));
+
+                if (bookCount == 0)
+                {
+                    MessageBox.Show("The provided ISBN does not exist in the database.");
+                    return;
+                }
+
+                // Check if the student has already issued 3 books
+                string countQuery = "SELECT COUNT(*) FROM issuebook WHERE enrollment_No = '" + textBox1.Text + "'";
+                int issuedBooksCount = Convert.ToInt32(db.GetScalarValue(countQuery));
+
+                if (issuedBooksCount >= 3)
+                {
+                    MessageBox.Show("The student has already issued the maximum allowed number of books (3).");
+                    return;
+                }
+
+                // Proceed to issue the book
+                string query = "INSERT INTO issuebook (enrollment_No, ISBN, issue_Date) VALUES ('" + textBox1.Text + "','" + isbn.Text + "','" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "')";
+                db.insertData(query);
+
+                MessageBox.Show("You have successfully issued the book.");
+                // Clear input fields after successful issuance
                 textBox1.Text = "";
                 sName.Text = "";
                 sEmail.Text = "";
                 sContact.Text = "";
                 isbn.Text = "";
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while issuing the book: " + ex.Message);
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -114,9 +156,10 @@ namespace LibraryManagementSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            Home home = new Home();
+            home.Show();
             this.Hide();
         }
+
     }
 }

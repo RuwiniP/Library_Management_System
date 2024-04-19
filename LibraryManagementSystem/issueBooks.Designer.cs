@@ -363,6 +363,7 @@
             button4.TabIndex = 19;
             button4.Text = "Cancel";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 

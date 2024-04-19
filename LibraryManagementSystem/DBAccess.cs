@@ -32,5 +32,21 @@ namespace LibraryManagementSystem
 
         }
 
+        public object GetScalarValue(string query)
+        {
+            object result = null;
+
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, con))
+                {
+                    con.Open();
+                    result = cmd.ExecuteScalar();
+                    con.Close();
+                }
+            }
+            return result;
+        }
+
+
     }
 }
