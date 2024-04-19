@@ -33,7 +33,7 @@ View the complete guide for the project idea from [here.](https://stuconestogaco
 
 ### 1.Download the Database Extract SQL File:
 * Navigate to the db_setup folder in the repository.
-* Locate the SQL file named [librarymanagementsystem.sql.](https://github.com/RuwiniP/Library_Management_System/blob/master/DBSetup/librarymanagementsystem.sql)
+* Locate the SQL file named [librarymanagementsystem.sql](https://github.com/RuwiniP/Library_Management_System/blob/master/DBSetup/librarymanagementsystem.sql)
 
 ### 2.Import SQL File into phpMyAdmin:
 * Log in to your phpMyAdmin dashboard.
